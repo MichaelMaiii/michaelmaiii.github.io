@@ -47,24 +47,14 @@
           <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
 
-    <tr onmouseout="synbrain_stop()" onmouseover="synbrain_start()">
+    <tr> <!-- 移除mouse事件 -->
       <td style="padding:16px;width:20%;vertical-align:middle">
         <div class="one">
-          <div class="two" id='synbrain_image'>
-					  <img src='images/synbrain1.jpg' width=100%>
-					</div>
+          <!-- 删除绝对定位和脚本，两张图自然排列 -->
+          <img src='images/synbrain1.jpg' width=100% style="margin-bottom: 8px;">
+        <div class="two" id='synbrain_image' style="margin-bottom: 8px;">
           <img src='images/synbrain2.jpg' width=100%>
         </div>
-        <script type="text/javascript">
-          function synbrain_start() {
-            document.getElementById('synbrain_image').style.opacity = "1";
-          }
-
-          function synbrain_stop() {
-            document.getElementById('synbrain_image').style.opacity = "0";
-          }
-          synbrain_stop()
-        </script>
       </td>
       <td style="padding:8px;width:80%;vertical-align:middle">
         <a href="https://arxiv.org/pdf/2508.10298">
